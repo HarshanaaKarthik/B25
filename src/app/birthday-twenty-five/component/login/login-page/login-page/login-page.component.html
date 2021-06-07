@@ -1,0 +1,22 @@
+<div *ngIf="loginPage" class="myclass" [ngStyle]="{'background': ' url(' + imageUrl  + ') no-repeat'}">
+    <h1 style="font-style: italic;font-size: x-large; text-align: center; padding-top: 30px;"> Trying Out Something Crazy</h1>
+    <div style="text-align: center; padding : 15% 0px 20% 0px">
+        <form novalidate [formGroup]="loginForm">
+            <div style="padding-bottom: 20px;font-style: italic">
+                <label style="font-size: medium">Kud Poy </label>&nbsp;&nbsp;&nbsp;
+                <input type="text" class="form-control" formControlName="username" style="font-style: italic" />
+            </div>
+            <div style="padding-bottom: 20px;font-style: italic">
+                <label style="font-size: medium">Loving </label>&nbsp;&nbsp;&nbsp;
+                <input type="text" class="form-control" formControlName="password" placeholder="How would I call my girl ?!"
+                    style="font-style: italic" />
+            </div>
+            <div style="padding-bottom: 20px;font-style: italic">
+                <input type="submit" value=" Watch What's In " (click)="onClickSubmit()" style="font-style: italic" />
+            </div>
+            <div *ngIf="showError != undefined" style="font-style: italic;font-size: medium">
+                {{showError}}
+            </div>
+        </form>
+    </div>
+</div>
